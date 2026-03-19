@@ -6,8 +6,8 @@ const cors = require("cors");
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
-  "https://tradevister.vercel.app",
-  "https://tradevister-kyc.vercel.app",
+  "https://trust-wavey.vercel.app",
+  "https://trust-wave-kyc.vercel.app",
 ];
 
 const corsOptions = {
