@@ -8,8 +8,7 @@ const cryptoModel = require("../models/cryptoModel");
 const adminMessage = require("../models/adminMessage");
 const userInfomation = require("../models/userInformation");
 
-const dotenv = require("dotenv");
-dotenv.config();
+const { sendWithdrawalEmail } = require("../helpers/mailer");
 
 const accountUpgradeModel = require("../models/accountLevel");
 const { hashPassword, comparePassword } = require("../helpers/auth");
@@ -702,6 +701,7 @@ const withdrawCrypto = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { deposit: -value } });
+        sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
@@ -716,6 +716,7 @@ const withdrawCrypto = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { profit: -value } });
+        sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
@@ -730,6 +731,7 @@ const withdrawCrypto = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { bonuse: -value } });
+        sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
@@ -807,6 +809,7 @@ const withdrawBank = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { deposit: -value } });
+    sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
@@ -823,9 +826,11 @@ const withdrawBank = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { profit: -value } });
+sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
+
   }
 
   if (findUser.bonuse >= value) {
@@ -839,6 +844,7 @@ const withdrawBank = async (req, res) => {
     });
 
     await User.updateOne({ email: email }, { $inc: { bonuse: -value } });
+    sendWithdrawalEmail(email, value);
     return res.json({
       success: "withdrawal request sent",
     });
