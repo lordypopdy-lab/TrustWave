@@ -8,6 +8,9 @@ const cryptoModel = require("../models/cryptoModel");
 const adminMessage = require("../models/adminMessage");
 const userInfomation = require("../models/userInformation");
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 const accountUpgradeModel = require("../models/accountLevel");
 const { hashPassword, comparePassword } = require("../helpers/auth");
 
