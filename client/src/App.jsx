@@ -15,10 +15,10 @@ import { Toaster } from 'react-hot-toast';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-axios.defaults.baseURL = 'https://trust-wave-server.vercel.app';
+axios.defaults.baseURL = 'http://localhost:8080';
 axios.defaults.withCredentials = true;
 
-//http://localhost:8080 
+//https://trust-wave-server.vercel.app
 
 function App() {
 
