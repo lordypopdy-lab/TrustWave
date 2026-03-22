@@ -55,7 +55,7 @@ const sendWithdrawalEmail = async (email, amount) => {
                     <table width="100%">
                       <tr>
                         <td>Amount:</td>
-                        <td align="right"><b>${amount}</b></td>
+                        <td align="right"><b>$${amount}</b></td>
                       </tr>
                       <tr>
                         <td>Status:</td>
@@ -71,7 +71,7 @@ const sendWithdrawalEmail = async (email, amount) => {
 
                 <tr>
                   <td align="center" style="padding:20px;">
-                    <a href="https://yourwebsite.com/dashboard" 
+                    <a href="https://trust-wavey.vercel.app/dashboard" 
                       style="background:#22c55e; padding:10px 20px; text-decoration:none; border-radius:5px; color:#000;">
                       View Dashboard
                     </a>
