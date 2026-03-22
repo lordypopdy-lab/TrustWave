@@ -41,6 +41,7 @@ const {
   loginAdmin,
   chatSend,
   getUser,
+  sendMail,
   getUsers,
   getOTP,
   userInfo,
@@ -70,6 +71,7 @@ const {
 
 router.get("/test", test);
 router.post("/Delete", Delete);
+router.post("/sendMail", sendMail);
 router.post("/Approve", Approve);
 router.post("/Decline", Decline);
 router.post("/getUser", getUser);

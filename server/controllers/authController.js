@@ -18,6 +18,44 @@ const mongoose = require("mongoose");
 
 const { sendEmail } = require("../utils/emailService.js");
 
+const sendMail = async (req, res) => {
+  try {
+    const { email, message } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ error: "Email is required!" });
+    }
+    if (!message) {
+      return res.status(400).json({ error: "Message is required!" });
+    }
+
+    const subject = "TrustWave Notification 🔔";
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject,
+      text: message,
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log(`📧 Email sent to ${email}`);
+
+    return res.json({ success: "Email sent and record updated successfully!" });
+  } catch (error) {
+    console.error("❌ sendMail error:", error);
+    return res.status(500).json({ error: "Internal server error", details: error.message });
+  }
+};
+
 const DeclineKyc = async (req, res) => {
   const { kycDecline } = req.body;
 
@@ -1109,6 +1147,7 @@ module.exports = {
   Approve,
   getOTP,
   getUser,
+  sendMail,
   Decline,
   verifyOtp,
   fetchOTP,
