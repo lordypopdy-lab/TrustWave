@@ -36,7 +36,7 @@ const NavBar = () => {
               className="me-2"
               alt="logo"
             />
-            TradeVister
+            POPDY
           </Navbar.Brand>
 
           {/* Toggle for mobile */}
