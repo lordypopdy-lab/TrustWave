@@ -1663,7 +1663,13 @@ const Admin = () => {
                     <hr style={{ borderColor: "rgba(255,255,255,0.2)" }} />
 
                     {/* Table */}
-                    <div className="table-responsive">
+                    <div 
+                      style={{
+                          maxHeight: "400px",
+                          overflowY: "auto",
+                          borderRadius: "12px",
+                        }}
+                      className="table-responsive">
                       <table className="table table-dark table-hover align-middle">
                         <thead>
                           <tr
