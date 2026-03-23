@@ -167,6 +167,7 @@ const ChooseVerification = (props) => {
                     <option>Armenia</option>
                     <option>Aruba</option>
                     <option>Australia</option>
+                    <option>Argentina</option>
                     <option>Austria</option>
                     <option>Azerbaidjan</option>
                     <option>Bahamas</option>
