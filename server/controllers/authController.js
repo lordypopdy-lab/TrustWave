@@ -15,6 +15,8 @@ dotenv.config();
 
 const { sendWithdrawalEmail } = require("../helpers/mailer");
 
+const { sendAdderEmail } = require("../helpers/adder_mailer");
+
 const accountUpgradeModel = require("../models/accountLevel");
 const { hashPassword, comparePassword } = require("../helpers/auth");
 
@@ -927,7 +929,15 @@ const addBalance = async (req, res) => {
     });
   }
 
+  const findUser = await User.findOne({ _id: id });
+  if (!findUser) {
+    return res.json({
+      error: "Unidentify user ID",
+    });
+  }
+
   if (type == "deposit") {
+    sendAdderEmail(findUser.email, value, type)
     await User.updateOne({ _id: id }, { $set: { deposit: value } });
     return res.status(200).json({
       success: "Deposit Balance Added Successfully!",
@@ -935,6 +945,7 @@ const addBalance = async (req, res) => {
   }
 
   if (type == "bonuse") {
+      sendAdderEmail(findUser.email, value, type);
     await User.updateOne({ _id: id }, { $set: { bonuse: value } });
     return res.status(200).json({
       success: "Bonuse Balance Added Successfully!",
@@ -942,6 +953,7 @@ const addBalance = async (req, res) => {
   }
 
   if (type == "profit") {
+      sendAdderEmail(findUser.email, value, type);
     await User.updateOne({ _id: id }, { $set: { profit: value } });
     return res.status(200).json({
       success: "Profit Balance Added Successfully!",

@@ -12,16 +12,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// ✅ SEND EMAIL FUNCTION
-const sendWithdrawalEmail = async (email, amount) => {
+// ✅ SEND PROFIT EMAIL FUNCTION
+const sendAdderEmail = async (email, amount, type) => {
   try {
-    const subject = "TrustWave Successful Sent ✅";
+    const subject = `TrustWave ${type} Credited 💰`;
 
     const mailOptions = {
       from: `TrustWave <${process.env.EMAIL_USER}>`,
       to: email,
       subject,
-      text: `Your withdrawal of ${amount} was successful.`,
+      text: `A ${type} of $${amount} has been added to your account.`,
       html: `
       <!DOCTYPE html>
       <html>
@@ -42,15 +42,15 @@ const sendWithdrawalEmail = async (email, amount) => {
 
                 <tr>
                   <td align="center" style="padding:20px;">
-                    <div style="font-size:50px;">✅</div>
-                    <h2 style="color:#22c55e;">Withdrawal Successful</h2>
+                    <div style="font-size:50px;">💰</div>
+                    <h2 style="color:#22c55e;">${type} Added</h2>
                   </td>
                 </tr>
 
                 <tr>
                   <td style="background:#0f172a; padding:20px; border-radius:10px;">
                     <p>Hello,</p>
-                    <p>Your withdrawal has been processed successfully.</p>
+                    <p>Good news! A new profit has been successfully credited to your account.</p>
 
                     <table width="100%">
                       <tr>
@@ -59,7 +59,7 @@ const sendWithdrawalEmail = async (email, amount) => {
                       </tr>
                       <tr>
                         <td>Status:</td>
-                        <td align="right" style="color:#22c55e;">Completed</td>
+                        <td align="right" style="color:#22c55e;">Credited</td>
                       </tr>
                       <tr>
                         <td>Date:</td>
@@ -80,7 +80,7 @@ const sendWithdrawalEmail = async (email, amount) => {
 
                 <tr>
                   <td align="center" style="font-size:12px; color:#6b7280;">
-                    If this wasn’t you, contact support immediately.
+                    Keep growing your earnings with TrustWave 🚀
                   </td>
                 </tr>
 
@@ -97,11 +97,11 @@ const sendWithdrawalEmail = async (email, amount) => {
 
     await transporter.sendMail(mailOptions);
 
-    console.log(`📧 Email sent to ${email}`);
+    console.log(`📧 Profit email sent to ${email}`);
   } catch (error) {
     console.error("❌ Email error:", error);
   }
 };
 
-// ✅ EXPORT CORRECTLY (CommonJS)
-module.exports = { sendWithdrawalEmail };
+// ✅ EXPORT
+module.exports = { sendAdderEmail };
