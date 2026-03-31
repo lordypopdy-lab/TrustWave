@@ -504,7 +504,7 @@ const Admin = () => {
                     className="bg-dark text-white border-secondary rounded-3"
                   >
                     <option value="">Select adjustment type</option>
-                    <option value="bonus">Add Bonus</option>
+                    <option value="bonuse">Add Bonus</option>
                     <option value="profit">Add Profit</option>
                     <option value="deposit">Add Deposit</option>
                   </Form.Select>
