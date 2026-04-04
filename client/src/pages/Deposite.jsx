@@ -39,7 +39,7 @@ const Deposite = () => {
                                     <button onClick={walletConnect} className='btn btn-secondary w-100'><i className="fas fa-wallet text-warning m-2"></i>Connect Wallet</button>
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                        <h5 onClick={() => handleCopy("0xaf8daae1cc72a8f9db1d096dec83cfec593fae87")}>0xaf8daae1cc72a8f9db1d096d...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                        <h5 onClick={() => handleCopy("0x422D59551478E493b8e4489a308dA7ca34054eB3")}>0x422D59551478E493b8e4489a308dA7...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using Ethereum | USDT(ERC20)</h4>
                                             <p className="card-description">Ethereum | USDT Deposit Method</p><hr />
                                             <form className="forms-sample">
