@@ -26,7 +26,7 @@ const Deposite = () => {
                                     <button onClick={walletConnect} className='btn btn-secondary w-100'><i className="fas fa-wallet text-warning m-2"></i>Connect Wallet</button>
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                        <h5 onClick={() => handleCopy("3F2AtgAAbn4TQoCJf9gXjr2MxtqgMXw3s3")}>3F2AtgAAbn4TQoCJf9gXjr2Mxtq..<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                        <h5 onClick={() => handleCopy("1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ")}>bc1q7ppeu0vywh0fejmjc7jznq9nf50xj..<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using Bitcoin | USDT(TRC20)</h4>
                                             <p className="card-description">Bitcoin | USDT Deposit Method</p><hr />
                                             <form className="forms-sample">
