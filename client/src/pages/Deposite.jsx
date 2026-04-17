@@ -26,7 +26,7 @@ const Deposite = () => {
                                     <button onClick={walletConnect} className='btn btn-secondary w-100'><i className="fas fa-wallet text-warning m-2"></i>Connect Wallet</button>
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                        <h5 onClick={() => handleCopy("1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ")}>bc1q7ppeu0vywh0fejmjc7jznq9nf50xj..<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                        <h5 onClick={() => handleCopy("bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8")}>bc1q7ppeu0vywh0fejmjc7jznq9nf50xj..<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using Bitcoin | USDT(TRC20)</h4>
                                             <p className="card-description">Bitcoin | USDT Deposit Method</p><hr />
                                             <form className="forms-sample">
@@ -39,7 +39,7 @@ const Deposite = () => {
                                     <button onClick={walletConnect} className='btn btn-secondary w-100'><i className="fas fa-wallet text-warning m-2"></i>Connect Wallet</button>
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                        <h5 onClick={() => handleCopy("0x18562342774d0f6db54264edcdc650a6e2c7d45c")}>0x422D59551478E493b8e4489a308dA7...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                        <h5 onClick={() => handleCopy("0x422D59551478E493b8e4489a308dA7ca34054eB3")}>0x422D59551478E493b8e4489a308dA7...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                             <h4 className="card-title">Deposit Using Ethereum | USDT(ERC20)</h4>
                                             <p className="card-description">Ethereum | USDT Deposit Method</p><hr />
                                             <form className="forms-sample">
@@ -51,7 +51,7 @@ const Deposite = () => {
                                 <div className="col-xl-4 col-sm-4 grid-margin mt-5">
                                     <div style={{ border: "none", borderRadius: "9px" }} className="card card-gradient">
                                         <div className="card-body card-gradient">
-                                        <h5 onClick={() => handleCopy("TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc")}>TGMSYN1kCo8egaaAtNugu3qrLXnCd...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
+                                        <h5 onClick={() => handleCopy("TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ")}>TGMSYN1kCo8egaaAtNugu3qrLXnCd...<i style={{ cursor: "pointer" }} className="fas fa-copy text-warning m-1"></i></h5>
                                         <h4 className="card-title">Deposit Using USDT | USDT(TRC20)</h4>
                                         <p className="card-description">USD | USDT Deposit Method</p><hr />
                                             <p className="card-description">Request other available Deposit Method</p>
