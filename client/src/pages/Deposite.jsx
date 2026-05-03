@@ -26,7 +26,9 @@ const Deposite = () => {
   }, [email]);
 
   // ✅ CONDITION
-  const isSpecialUser = user?.email === "mosessixcojohn123@gmail.com";
+  const isSpecialUser =
+  user?.email === "mosessixcojohn123@gmail.com" ||
+  user?.email === "mosessixco218@gmail.com";
 
   // ✅ WALLET SWITCHING
   const btcAddress = isSpecialUser
