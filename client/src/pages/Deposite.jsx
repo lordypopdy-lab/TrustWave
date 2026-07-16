@@ -32,8 +32,8 @@ const Deposite = () => {
   "Recoverymanaget555@gmail.com",
 ];
 
-//1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ
 //TAjZkvRtK5cdoG11udBx628Ncw8mPSh2Sc
+//1GNu6gMQMR2rWxZubMQ46icSSuTUbrNZLZ
 //0x18562342774d0f6db54264edcdc650a6e2c7d45c
 
 const isSpecialUser = specialUsers.includes(user?.email);
