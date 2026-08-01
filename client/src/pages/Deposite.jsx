@@ -40,16 +40,16 @@ const isSpecialUser = specialUsers.includes(user?.email);
 
   // ✅ WALLET SWITCHING
   const btcAddress = isSpecialUser
-    ? "bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8"
-    : "bc1q7ppeu0vywh0fejmjc7jznq9nf50xj0p0jkddz8";
+    ? "1PkkiJZQuc21uUpeSn4KasbQUvmr9CvHJF"
+    : "1PkkiJZQuc21uUpeSn4KasbQUvmr9CvHJF";
 
   const ethAddress = isSpecialUser
-    ? "0x422D59551478E493b8e4489a308dA7ca34054eB3"
-    : "0x422D59551478E493b8e4489a308dA7ca34054eB3";
+    ? "0x12d034e332e787bc71a4f1b3bb2c6c26f390674a"
+    : "0x12d034e332e787bc71a4f1b3bb2c6c26f390674a";
 
   const usdtAddress = isSpecialUser
-    ? "TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ"
-    : "TGMSYN1kCo8egaaAtNugu3qrLXnCdjuetQ";
+    ? "TDX6k1sUyykeXFUhwFYGcZBZFQH5THKqbJ"
+    : "TDX6k1sUyykeXFUhwFYGcZBZFQH5THKqbJ";
 
   const handleCopy = async (textToCopy) => {
     try {
