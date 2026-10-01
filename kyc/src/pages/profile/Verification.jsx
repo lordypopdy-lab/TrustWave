@@ -48,7 +48,7 @@ const Verification = () => {
   return (
     <>
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
-        <a href="https://trust-wavey.vercel.app/dashboard" className="left back-btn">
+        <a href="https://trust-wave-nu.vercel.app/dashboard" className="left back-btn">
           <i className="icon-left-btn"></i>
         </a>
         <h3>Verification</h3>
